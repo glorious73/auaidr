@@ -1,0 +1,25 @@
+{
+  "name": "aidr",
+  "version": "1.0.0",
+  "description": "A Web Application to operate and monitor any robot running the Robot Operating System (ROS) through the Internet.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "aidr"
+  ],
+  "author": "Amjad Abujamous - Aidr Labs",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "firebase": "^5.8.5",
+    "path": "^0.12.7",
+    "roslib": "^1.0.1"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,41 @@
+<h5 class="h5 mb-2">Battery Management System</h5>
+<hr>
+<!-- container-fluid for toggle switches -->
+<div class="container-fluid">
+  <div class="row mb-1">
+    <div class="card text-center col-sm mr-3 ml-3">
+      <div class="card-body">
+        <h6 class="card-title">Battery Current</h6>
+        <label class="switch">
+          <input type="checkbox" onclick="monitorCurrent()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <div class="card text-center col-sm mr-3 ml-3">
+      <div class="card-body">
+        <h6 class="card-title">Battery Voltage</h6>
+        <label class="switch">
+          <input type="checkbox" onclick="monitorBMSVoltage()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <div class="card text-center col-sm mr-3 ml-3">
+      <div class="card-body">
+        <h6 class="card-title">Battery Temperature</h6>
+        <label class="switch">
+          <input type="checkbox" onclick="monitorTemperature()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-1">
+    <div class="card text-center col-sm mr-3 ml-3">
+      <div class="card-body">
+        <div class="mx-auto" id="voltageChartContainer" style="height: 300px; width: 95%; margin-top: 5px; margin-bottom: 5px;"></div>
+      </div>
+    </div>
+  </div>
+</div>

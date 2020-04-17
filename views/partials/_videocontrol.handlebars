@@ -1,0 +1,89 @@
+<h5 class="h5 mb-2">Video & Control</h5>
+<hr>
+<!-- container-fluid for toggle switches -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="card text-center col-sm mr-3 ml-3">
+      <div class="card-body">
+        <h6 class="card-title">Joystick</h6>
+        <label class="switch">
+          <input type="checkbox" onclick="activateJoystick()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <div class="card text-center col-sm mr-3 ml-3">
+      <div class="card-body">
+        <h6 class="card-title">Video Stream</h6>
+        <label class="switch">
+          <input type="checkbox" onclick="displayLiveVideo()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card border rounded">
+        <!-- Centered video -->
+        <div class="card-body main-bg">
+          <!-- 16:9 Video ratio -->
+          <img src="" id="liveRobotVideo" alt="Live Video" style="display: none; margin-left: auto; margin-right: auto; width: 60%; height: 5%">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <div class="card-footer">
+        <!-- Width and height of joystick will be changed -->
+        <div class="d-flex justify-content-center" style="width: 210px; height: 195px;">
+          <div id="joystick"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="line"></div>
+
+<div class="container">
+  <table class="table">
+    <thead style="background: #7386D5;">
+      <tr>
+        <th class="text-white" scope="col">Name</th>
+        <th class="text-white" scope="col">Element</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          Status indicators
+        </th>
+        <td>
+          <!-- container-fluid for toggle switches -->
+          <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+              <button type="button" class="btn btn-success col-sm-4 mt-2 mb-2 ml-2 mr-2" onclick="ledAction('green')">Green led</button>
+              <button type="button" class="btn btn-warning col-sm-4 mt-2 mb-2 ml-2 mr-2" onclick="ledAction('yellow')">Yellow led</button>
+              <button type="button" class="btn btn-danger col-sm-4 mt-2 mb-2 ml-2 mr-2" onclick="ledAction('red')">Red led</button>
+              <button type="button" class="btn btn-primary col-sm-4 mt-2 mb-2 ml-2 mr-2" onclick="ledAction('blue')">Blue led</button>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="robot-speed">
+            <strong>Robot speed </strong>
+          </label>
+        </th>
+        <td>
+          <input type="range" min="0" max="255" class="custom-range" id="robot-speed">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
