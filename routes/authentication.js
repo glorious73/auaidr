@@ -1,7 +1,6 @@
 const express    = require('express');
 const router     = express.Router();
-const bodyParser = require('body-parser');
-// Auth
+
 const firebase = require('firebase');
 require('firebase/auth');
 global.userIds = []; // currently logged in users

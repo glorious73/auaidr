@@ -1,9 +1,7 @@
 /*---------- Essentials ---------- */
 const express    = require('express');
 const router     = express.Router();
-const cors       = require('cors');
-const bodyParser = require('body-parser');
-const {checkRobotConnection} = require('../helpers/checkRobotConnection'); // used to confirm connection
+const { checkRobotConnection } = require('../helpers/checkRobotConnection');
 /*----- Enable CORS -----*/
 router.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -60,7 +58,7 @@ router.post('/connect', (req, res) => {
     initPercentSubscriberTopic();
     initLedPublisherTopic();
     return res.json({success: true,  name: robotName, toastMessage: 'Connected to robot.'});
-  })
+  });
   ros.on('error', function(error) {
     console.log('Error connecting to websocket server: ', error);
     return res.json({success: false, toastMessage: 'Error connecting to robot.'});
@@ -266,12 +264,12 @@ global.turnOffAllNodes = function () {
   if(cmdArduino !== null) {  cmdArduino = null;  }
   if(arduinoled !== null) {  arduinoled = null;  }
   if(percentNode !== null) {  percentNode = null;  }
-}
+};
 //----------- a function that maps a range of numbers to another -----------*/
 // Credit: https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
 const scale = (num, in_min, in_max, out_min, out_max) => {
   return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
+};
 /*---------------- /Functions ----------------*/
 /*-------------------- Finally, export ros router --------------------*/
 module.exports = router;
